@@ -6,7 +6,7 @@
         <!-- Post Content Column -->
         <div class="col-lg-8">
             <!-- Title -->
-            <h1 class="mt-4">Artikel Terbaru</h1>
+            <h1 class="mt-4">Artikel Terbaru.</h1>
             <!-- Author -->
             <p class="lead">
                 by
