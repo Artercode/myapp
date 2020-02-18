@@ -1,29 +1,25 @@
-<html lang="en">
+<?php $this->load->view('partials/header'); ?>
+<!-- Page Content -->
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <h1>Tambah Artikel</h1>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="">Judul</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">URL</label>
+                    <input type="text" name="url" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Konten</label>
+                    <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Tambah Artikel</h1>
-    <form method="POST">
-        <div>
-            <label for="">Judul</label>
-            <input type="text" name="title">
+                <button type="submit" class="btn btn-primary">Simpan Artikel</button>
+            </form>
         </div>
-        <div>
-            <label for="">URL</label>
-            <input type="text" name="url">
-        </div>
-        <div>
-            <label for="">Konten</label>
-            <textarea name="content" id="" cols="30" rows="10"></textarea>
-        </div>
-
-        <button type="submit">Simpan Artikel</button>
-    </form>
-</body>
-
-</html>
+        <?php $this->load->view('partials/footer'); ?>
