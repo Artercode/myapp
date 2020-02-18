@@ -7,19 +7,19 @@
 </head>
 
 <body>
-    <h1>Tambah Artikel</h1>
+    <h1>Edit Artikel</h1>
     <form method="POST">
         <div>
             <label for="">Judul</label>
-            <input type="text" name="title">
+            <input type="text" name="title" value="<?php echo $blog['title']; ?>">
         </div>
         <div>
             <label for="">URL</label>
-            <input type="text" name="url">
+            <input type="text" name="url" value="<?php echo $blog['url']; ?>">
         </div>
         <div>
             <label for="">Konten</label>
-            <textarea name="content" id="" cols="30" rows="10"></textarea>
+            <textarea name="content" id="" cols="30" rows="10"><?php echo $blog['content']; ?></textarea>
         </div>
 
         <button type="submit">Simpan Artikel</button>

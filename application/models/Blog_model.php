@@ -10,10 +10,10 @@ class Blog_model extends CI_Model
         return $this->db->get("blog");
     }
     // mengambil 1 baris data berdasarkan url nya
-    public function getSingelBlog($url)
+    public function getSingelBlog($field, $value)
     {
         // $query = $this->db->query('SELECT * FROM blog WHERE url = "' . $url . '"');
-        $this->db->where('url', $url);
+        $this->db->where($field, $value);
         return $this->db->get('blog');
     }
 
@@ -21,6 +21,13 @@ class Blog_model extends CI_Model
     {
         $this->db->insert('blog', $data);
         return $this->db->insert_id();
+    }
+
+    public function updateBlog($id, $post)
+    {
+        $this->db->where('id', $id);
+        $this->db->update('blog', $post);
+        return $this->db->affected_rows();
     }
 }
 
