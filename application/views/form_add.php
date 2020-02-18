@@ -5,7 +5,7 @@
         <!-- Post Content Column -->
         <div class="col-lg-8">
             <h1>Tambah Artikel</h1>
-            <?php echo form_open(); ?>
+            <?php echo form_open_multipart(); ?>
             <div class="form-group">
                 <label for="">Judul</label>
                 <?php echo form_input('title', null, 'class="form-control"'); ?>
@@ -17,6 +17,10 @@
             <div class="form-group">
                 <label for="">Konten</label>
                 <?php echo form_textarea('content', null, 'class="form-control"'); ?>
+            </div>
+            <div class="form-group">
+                <label>Cover</label>
+                <?php echo form_upload('cover', null, 'class="form-control"'); ?>
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan Artikel</button>
